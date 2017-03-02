@@ -27,16 +27,12 @@
 <body>
     <div id="map"></div>
     <script>
-        var infowindow = new google.maps.InfoWindow({
-            content: "Besøg zoo og se dyr:",
-            position: {
-                lat: 55.671993,
-                lng: 12.523541
-            }
-        });
-        infowindow.open(map);
-
         function initMap() {
+
+
+
+
+
 
             var image = {
                 url: 'pi.png',
@@ -48,8 +44,6 @@
             var myLatLng = {
                 lat: 64.122026,
                 lng: -21.852449,
-
-
 
 
 
@@ -86,6 +80,7 @@
                 center: myLatLng
             });
 
+
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,
@@ -101,6 +96,30 @@
                 icon: image,
 
             });
+
+
+
+
+
+
+            //infowindow
+            var infowindow = new google.maps.InfoWindow({
+                content: "<h3>Island er nice</h3>"
+                    //                position: {
+                    //                    lat: 55.671993,
+                    //                    lng: 12.523541
+                    //                }
+            });
+
+
+
+
+
+
+
+            //            infowindow.open(map, marker1
+
+
 
 
             var marker2 = new google.maps.Marker({
@@ -119,30 +138,10 @@
             });
 
 
-
-            marker.addListener('click', function() {
-                map.setZoom(15);
-                map.setCenter(marker.getPosition());
-            });
-
-
-
-
-
             marker1.addListener('click', function() {
-                map.setZoom(15);
-                map.setCenter(marker1.getPosition());
+                infowindow.open(map, marker1);
             });
 
-            marker2.addListener('click', function() {
-                map.setZoom(15);
-                map.setCenter(marker2.getPosition());
-            });
-
-            marker3.addListener('click', function() {
-                map.setZoom(15);
-                map.setCenter(marker3.getPosition());
-            });
 
 
 
