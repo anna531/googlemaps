@@ -10,7 +10,8 @@
        * element that contains the map. */
 
         #map {
-            height: 100%;
+            height: 80%;
+            width: 80%;
         }
         /* Optional: Makes the sample page fill the window. */
 
@@ -21,137 +22,139 @@
             padding: 0;
         }
 
+        .random {
+            display: none;
+        }
+
     </style>
 </head>
 
 <body>
+    <template id="random">
+        this is so random
+
+    </template>
+
+
     <div id="map"></div>
     <script>
         function initMap() {
 
 
 
-
-
-
             var image = {
-                url: 'pi.png',
+                url: 'pi.png'
+            };
 
-
+            var sondermarken = {
+                lat: 55.669435,
+                lng: 12.524965
             };
 
 
-            var myLatLng = {
-                lat: 64.122026,
-                lng: -21.852449,
 
 
 
-
+            var hedeskov = {
+                lat: 56.369155,
+                lng: 10.439580
             };
 
-            var myLatLng1 = {
-
-                lat: 64.121520,
-                lng: -21.854037,
-
+            var aarhus = {
+                lat: 56.153926,
+                lng: 10.199874
             };
 
-            var myLatLng2 = {
-
-
-
-                lat: 64.139103,
-                lng: -21.769364,
-
-            };
-
-            var myLatLng3 = {
-
-
-
-                lat: 64.093393,
-                lng: -21.835282,
-
+            var halmtorvet = {
+                lat: 55.669461,
+                lng: 12.558611
             };
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: myLatLng
+                zoom: 15,
+                center: sondermarken
             });
 
 
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'hejjj!',
-                icon: image
 
 
-            });
+
+
+
             var marker1 = new google.maps.Marker({
-                position: myLatLng1,
+                position: sondermarken,
                 map: map,
-                title: 'wuhuu!',
-                icon: image,
+                title: 'wowow!',
+                icon: image
+            });
+
+            marker1.addListener('click', function() {
+                map.setZoom(18);
+                map.setCenter(marker1.getPosition());
+
 
             });
 
+            var marker2 = new google.maps.Marker({
+                position: hedeskov,
+                map: map,
+                title: 'this is home!',
+                icon: image
+            });
 
+            marker2.addListener('click', function() {
+                map.setZoom(4);
+                map.setCenter(marker2.getPosition());
+            });
 
+            var marker3 = new google.maps.Marker({
+                position: aarhus,
+                map: map,
+                title: 'Aarhus!',
+                icon: image
+            });
 
+            marker3.addListener('click', function() {
+                map.setZoom(22);
+                map.setCenter(marker3.getPosition());
+            });
 
+            var marker4 = new google.maps.Marker({
+                position: halmtorvet,
+                map: map,
+                title: 'Halmtorvet!',
+                icon: image
+            });
 
-            //infowindow
+            marker4.addListener('click', function() {
+                map.setZoom(8);
+                map.setCenter(marker4.getPosition());
+            });
+
             var infowindow = new google.maps.InfoWindow({
-                content: "<h3>Island er nice</h3>"
+                content: "<h3>Her er Søndermarken</h3>"
                     //                position: {
                     //                    lat: 55.671993,
                     //                    lng: 12.523541
                     //                }
             });
 
-
-
-
-
-
-
-            //            infowindow.open(map, marker1
-
-
-
-
-            var marker2 = new google.maps.Marker({
-                position: myLatLng2,
-                map: map,
-                title: 'yeaahhh!',
-                icon: image
-            });
-
-
-            var marker3 = new google.maps.Marker({
-                position: myLatLng3,
-                map: map,
-                title: 'fedest!',
-                icon: image
-            });
-
+            //            infowindow.open(map, marker1);
 
             marker1.addListener('click', function() {
                 infowindow.open(map, marker1);
+                //
+
+                var klon = document.querySelector("#random").content.cloneNode(true);
+
+                infowindow.setContent(klon);
+
+
             });
-
-
-
-
-
-
         }
 
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBh6K4hgqBhAY5prSEoFEfgL07Zwmx0wOM
-&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3wQLxQB3jLxh7C-WEuFrdkkd8FuDpUEY&callback=initMap">
 
 
     </script>
