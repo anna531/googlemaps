@@ -29,9 +29,20 @@
     <script>
         function initMap() {
 
+            var image = {
+                url: 'pi.png',
+
+
+            };
+
+
             var myLatLng = {
                 lat: 64.122026,
                 lng: -21.852449,
+
+
+
+
 
 
             };
@@ -61,8 +72,6 @@
 
             };
 
-
-
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 12,
                 center: myLatLng
@@ -71,26 +80,33 @@
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,
-                title: 'hejjj!'
+                title: 'hejjj!',
+                icon: image
+
+
             });
             var marker1 = new google.maps.Marker({
                 position: myLatLng1,
                 map: map,
-                title: 'wuhuu!'
+                title: 'wuhuu!',
+                icon: image,
+
             });
 
 
             var marker2 = new google.maps.Marker({
                 position: myLatLng2,
                 map: map,
-                title: 'yeaahhh!'
+                title: 'yeaahhh!',
+                icon: image
             });
 
 
             var marker3 = new google.maps.Marker({
                 position: myLatLng3,
                 map: map,
-                title: 'fedest!'
+                title: 'fedest!',
+                icon: image
             });
 
 
