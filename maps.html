@@ -27,6 +27,15 @@
 <body>
     <div id="map"></div>
     <script>
+        var infowindow = new google.maps.InfoWindow({
+            content: "Besøg zoo og se dyr:",
+            position: {
+                lat: 55.671993,
+                lng: 12.523541
+            }
+        });
+        infowindow.open(map);
+
         function initMap() {
 
             var image = {
@@ -108,6 +117,35 @@
                 title: 'fedest!',
                 icon: image
             });
+
+
+
+            marker.addListener('click', function() {
+                map.setZoom(15);
+                map.setCenter(marker.getPosition());
+            });
+
+
+
+
+
+            marker1.addListener('click', function() {
+                map.setZoom(15);
+                map.setCenter(marker1.getPosition());
+            });
+
+            marker2.addListener('click', function() {
+                map.setZoom(15);
+                map.setCenter(marker2.getPosition());
+            });
+
+            marker3.addListener('click', function() {
+                map.setZoom(15);
+                map.setCenter(marker3.getPosition());
+            });
+
+
+
 
 
         }
