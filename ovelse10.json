@@ -1,33 +1,39 @@
  [
      {
-         "id": "rumfaergen",
-         "title": "hejjjejeje",
-         "navn": "Rumfærgen!",
+         "id": "hovedindgang",
+         "navn": "hovedindgang!",
          "position": {
-             "lat: 55.706374",
-             "lng: 12.539071"
+             "lat": 55.706374,
+             "lng": 12.539071
+
+         },
+
+         "icon": "icon.png"
+
+        },
+
+
+     {
+         "id": "rygerskuret",
+         "navn": "rygerskuret!",
+         "position": {
+             "lat": 55.706530,
+             "lng": 12.539097
          }
 
         },
 
-
      {
-         "id": "kantinen",
-         "navn": "kantinen!"
-
-        },
-
-     {
-         "id": "wc",
-         "navn": "Stort wc!"
-
-        },
-
-     {
-         "id": "gaardhaven",
-         "navn": "Gårdhaven!"
+         "id": "kantine",
+         "navn": "kantine",
+         "position": {
+             "lat": 55.706793,
+             "lng": 12.538363
+         }
 
         }
+
+
 
 
 ]
