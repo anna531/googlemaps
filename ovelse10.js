@@ -11,16 +11,12 @@ function initMap() {
     };
 
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
         center: hovedindgang
     });
 
-        var marker = new google.maps.Marker({
-        position: hovedindgang,
-        map: map,
-        title: 'Hello World!'
-    });
+
     console.log("Load JSON")
     $.getJSON("ovelse10.json", visSteder);
 }
@@ -35,7 +31,7 @@ function visSteder(steder) {
 }
 
 function visSted(sted) {
-    console.log(sted);
+    console.log("visSted:", sted);
 
 
     // her skal I oprette marker, og infobox, og lave event-funktionen og alt det der
