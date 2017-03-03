@@ -8,7 +8,9 @@
 
          },
 
-         "icon": "icon.png"
+         "billede": "hovedindgang.jpg",
+         "beskrivelse": "hovedindgang beskrivelse"
+
 
         },
 
@@ -19,9 +21,12 @@
          "position": {
              "lat": 55.706530,
              "lng": 12.539097
-         }
+         },
+         "billede": "rygeskur.jpg",
+         "beskrivelse": "rygerskureet mmmm"
 
         },
+
 
      {
          "id": "kantine",
@@ -29,11 +34,26 @@
          "position": {
              "lat": 55.706793,
              "lng": 12.538363
-         }
+         },
+         "billede": "kantine.jpg",
+         "beskrivelse": "kantine nice"
+
+
+        },
+
+
+     {
+         "id": "lidl",
+         "navn": "LIDL",
+         "position": {
+             "lat": 55.706519,
+             "lng": 12.538136
+         },
+         "billede": "Lidl.jpg",
+         "beskrivelse": "Lidl woowow"
+
 
         }
-
-
 
 
 ]

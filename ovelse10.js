@@ -19,6 +19,10 @@ function initMap() {
 
     console.log("Load JSON")
     $.getJSON("ovelse10.json", visSteder);
+
+
+
+
 }
 
 
@@ -42,5 +46,34 @@ function visSted(sted) {
         //        icon: "icon.png",
         title: sted.title
     });
+
+
+    marker.addListener("click", klikPaaIkon);
+
+    function klikPaaIkon() {
+        console.log("klik på ikon");
+
+        var infowindow = new google.maps.InfoWindow({
+
+        });
+        var klon = document.querySelector("#informationskasse").content.cloneNode(true);
+
+        klon.querySelector(".data_navn").textContent = sted.navn;
+        klon.querySelector(".data_billede").src = sted.billede;
+
+        klon.querySelector(".data_beskrivelse").textContent = sted.beskrivelse;
+
+
+
+
+        //under kloner
+        infowindow.setContent(klon);
+
+        infowindow.open(map, marker);
+    }
+
+
+
+
 
 }
