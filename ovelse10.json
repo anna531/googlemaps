@@ -1,0 +1,33 @@
+ [
+     {
+         "id": "rumfaergen",
+         "title": "hejjjejeje",
+         "navn": "Rumfærgen!",
+         "position": {
+             "lat: 55.706374",
+             "lng: 12.539071"
+         }
+
+        },
+
+
+     {
+         "id": "kantinen",
+         "navn": "kantinen!"
+
+        },
+
+     {
+         "id": "wc",
+         "navn": "Stort wc!"
+
+        },
+
+     {
+         "id": "gaardhaven",
+         "navn": "Gårdhaven!"
+
+        }
+
+
+]
