@@ -12,9 +12,20 @@ function initMap() {
 
 
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
+        zoom: 18,
         center: hovedindgang
     });
+
+    var bounds = {
+        north: 55.708016357370358,
+        south: 55.705012897352266,
+        east: 12.542251594264926,
+        west: 12.536814405734958
+
+    }
+
+    var overlay = new google.maps.GroundOverlay('overlay-01.svg', bounds);
+    overlay.setMap(map);
 
 
     console.log("Load JSON")
